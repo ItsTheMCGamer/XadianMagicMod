@@ -1,0 +1,8 @@
+{
+  "name": "Guide Book",
+  "landing_text": "Welcome to this magical world inspired by the show The Dragon Prince. This book is here to guide you throughout your adventure.",
+  "version": 1,
+  "creative_tab": "xadian_magic:xadian_magic_tab",
+  "show_progress": false,
+  "use_resource_pack": true
+}
