@@ -20,6 +20,29 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.xadian_magic_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SPELLBOOK.get());
+
+                        pOutput.accept(ModItems.SKY_PRIMAL_STONE.get());
+                        pOutput.accept(ModItems.STAR_PRIMAL_STONE.get());
+                        pOutput.accept(ModItems.SUN_PRIMAL_STONE.get());
+                        pOutput.accept(ModItems.EARTH_PRIMAL_STONE.get());
+                        pOutput.accept(ModItems.MOON_PRIMAL_STONE.get());
+                        pOutput.accept(ModItems.OCEAN_PRIMAL_STONE.get());
+
+                        pOutput.accept(ModItems.STONEHEART_EMERALD.get());
+                        pOutput.accept(ModItems.SKY_SAPPHIRE.get());
+                        pOutput.accept(ModItems.AQUAMARINE.get());
+                        pOutput.accept(ModItems.QUASAR_DIAMOND.get());
+                        pOutput.accept(ModItems.FIRE_RUBY.get());
+                        pOutput.accept(ModItems.MOON_OPAL.get());
+
+                        pOutput.accept(ModItems.SKY_STAFF.get());
+                        pOutput.accept(ModItems.SUN_STAFF.get());
+                        pOutput.accept(ModItems.MOON_STAFF.get());
+                        pOutput.accept(ModItems.EARTH_STAFF.get());
+                        pOutput.accept(ModItems.OCEAN_STAFF.get());
+                        pOutput.accept(ModItems.STAFF_OF_ZIARD.get());
+
+                        pOutput.accept(ModItems.MAGE_GILLS_AMULET.get());
                     })
                     .build());
 
