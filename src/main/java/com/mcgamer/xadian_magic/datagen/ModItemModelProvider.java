@@ -33,14 +33,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModItems.FIRE_RUBY);
         //simpleItem(ModItems.AQUAMARINE);
 
-        simpleItem(ModItems.STAFF_OF_ZIARD);
-        simpleItem(ModItems.SKY_STAFF);
-        simpleItem(ModItems.MOON_STAFF);
-        simpleItem(ModItems.EARTH_STAFF);
-        simpleItem(ModItems.SUN_STAFF);
-        simpleItem(ModItems.OCEAN_STAFF);
-
         //simpleItem(ModItems.MAGE_GILLS_AMULET);
+
+        handheldItem(ModItems.SKY_STAFF);
+        handheldItem(ModItems.SUN_STAFF);
+        handheldItem(ModItems.OCEAN_STAFF);
+        handheldItem(ModItems.MOON_STAFF);
+        handheldItem(ModItems.EARTH_STAFF);
+        handheldItem(ModItems.STAFF_OF_ZIARD);
 
 
     }
@@ -48,6 +48,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(XadianMagic.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(XadianMagic.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

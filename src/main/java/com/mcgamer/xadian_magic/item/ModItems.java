@@ -2,6 +2,9 @@ package com.mcgamer.xadian_magic.item;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.TridentItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,6 +30,23 @@ public class ModItems {
     public static final RegistryObject<Item> OCEAN_PRIMAL_STONE = ITEMS.register("ocean_primal_stone",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> QUASAR_DIAMOND_ORE = ITEMS.register("quasar_diamond_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MOON_OPAL_ORE = ITEMS.register("moon_opal_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> FIRE_RUBY_ORE = ITEMS.register("fire_ruby_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AQUAMARINE_ORE = ITEMS.register("aquamarine_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AQUAMARINE_DEEPSLATE_ORE = ITEMS.register("aquamarine_deepslate_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STONEHEART_EMERALD_ORE = ITEMS.register("stoneheart_emerald_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SKY_SAPPHIRE_ORE = ITEMS.register("sky_sapphire_ore",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SKY_SAPPHIRE_DEEPSLATE_ORE = ITEMS.register("sky_sapphire_deepslate_ore",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> QUASAR_DIAMOND = ITEMS.register("quasar_diamond",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MOON_OPAL = ITEMS.register("moon_opal",
@@ -41,17 +61,17 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SKY_STAFF = ITEMS.register("sky_staff",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.WOOD, 2, 2, new Item.Properties()));
     public static final RegistryObject<Item> MOON_STAFF = ITEMS.register("moon_staff",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.WOOD, 2, 2, new Item.Properties()));
     public static final RegistryObject<Item> SUN_STAFF = ITEMS.register("sun_staff",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.WOOD, 2, 2, new Item.Properties()));
     public static final RegistryObject<Item> OCEAN_STAFF = ITEMS.register("ocean_staff",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.WOOD, 2, 2, new Item.Properties()));
     public static final RegistryObject<Item> EARTH_STAFF = ITEMS.register("earth_staff",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.WOOD, 2, 2, new Item.Properties()));
     public static final RegistryObject<Item> STAFF_OF_ZIARD = ITEMS.register("staff_of_ziard",
-            () -> new Item(new Item.Properties()));
+            () -> new SwordItem(Tiers.WOOD, 2, 2, new Item.Properties()));
 
     public static final RegistryObject<Item> MAGE_GILLS_AMULET = ITEMS.register("mage_gills_amulet",
             () -> new Item(new Item.Properties()));

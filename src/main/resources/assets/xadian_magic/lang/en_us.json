@@ -1,5 +1,41 @@
 {
   "creativetab.xadian_magic_tab": "Xadian Magic",
 
-  "item.xadian_magic.spellbook": "Spellbook"
+  "item.xadian_magic.spellbook": "Spellbook",
+
+  "item.xadian_magic.aquamarine": "Aquamarine",
+  "item.xadian_magic.sky_sapphire": "Sky Sapphire",
+  "item.xadian_magic.fire_ruby": "Fire Ruby",
+  "item.xadian_magic.quasar_diamond": "Quasar Diamond",
+  "item.xadian_magic.stoneheart_emerald": "Stoneheart Emerald",
+  "item.xadian_magic.moon_opal": "Moon Opal",
+
+  "item.xadian_magic.aquamarine_ore": "Aquamarine Ore",
+  "item.xadian_magic.aquamarine_deepslate_ore": "Aquamarine Deepslate Ore",
+  "item.xadian_magic.sky_sapphire_ore": "Sky Sapphire Ore",
+  "item.xadian_magic.sky_sapphire_deepslate_ore": "Sky Sapphire Deepslate Ore",
+  "item.xadian_magic.fire_ruby_ore": "Fire Ruby Ore",
+  "item.xadian_magic.quasar_diamond_ore": "Quasar Diamond Ore",
+  "item.xadian_magic.stoneheart_emerald_ore": "Stoneheart Emerald Ore",
+  "item.xadian_magic.moon_opal_ore": "Moon Opal Ore",
+
+  "item.xadian_magic.sun_staff": "Sun Staff",
+  "item.xadian_magic.sky_staff": "Sky Staff",
+  "item.xadian_magic.moon_staff": "Moon Staff",
+  "item.xadian_magic.ocean_staff": "Ocean Staff",
+  "item.xadian_magic.earth_staff": "Earth Staff",
+  "item.xadian_magic.staff_of_ziard": "Staff of Ziard",
+
+  "item.xadian_magic.sky_primal_stone": "Sky Primal Stone",
+  "item.xadian_magic.sun_primal_stone": "Sun Primal Stone",
+  "item.xadian_magic.star_primal_stone": "Star Primal Stone",
+  "item.xadian_magic.earth_primal_stone": "Earth Primal Stone",
+  "item.xadian_magic.moon_primal_stone": "Moon Primal Stone",
+  "item.xadian_magic.ocean_primal_stone": "Ocean Primal Stone",
+
+  "item.xadian_magic.mage_gills_amulet": "Mage Gills Amulet",
+
+  "key.category.xadian_magic.xadian_magic": "Xadian Magic",
+  "key.xadian_magic.cast_spell": "Cast Spell",
+  "key.xadian_magic.open_gui": "Open GUI"
 }

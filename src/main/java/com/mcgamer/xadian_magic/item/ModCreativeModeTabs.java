@@ -35,6 +35,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.FIRE_RUBY.get());
                         pOutput.accept(ModItems.MOON_OPAL.get());
 
+                        pOutput.accept(ModItems.STONEHEART_EMERALD_ORE.get());
+                        pOutput.accept(ModItems.SKY_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModItems.SKY_SAPPHIRE_DEEPSLATE_ORE.get());
+                        pOutput.accept(ModItems.AQUAMARINE_ORE.get());
+                        pOutput.accept(ModItems.AQUAMARINE_DEEPSLATE_ORE.get());
+                        pOutput.accept(ModItems.QUASAR_DIAMOND_ORE.get());
+                        pOutput.accept(ModItems.FIRE_RUBY_ORE.get());
+                        pOutput.accept(ModItems.MOON_OPAL_ORE.get());
+
                         pOutput.accept(ModItems.SKY_STAFF.get());
                         pOutput.accept(ModItems.SUN_STAFF.get());
                         pOutput.accept(ModItems.MOON_STAFF.get());

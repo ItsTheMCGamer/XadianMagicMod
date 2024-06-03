@@ -2,6 +2,7 @@ package com.mcgamer.xadian_magic;
 
 import com.mcgamer.xadian_magic.item.ModCreativeModeTabs;
 import com.mcgamer.xadian_magic.item.ModItems;
+import com.mcgamer.xadian_magic.networking.ModPackets;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,7 +39,7 @@ public class XadianMagic {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        ModPackets.register();
     }
 
     // Add the example block item to the building blocks tab
