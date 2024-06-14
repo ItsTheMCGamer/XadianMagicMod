@@ -1,9 +1,7 @@
 package com.mcgamer.xadian_magic.networking;
 
 import com.mcgamer.xadian_magic.XadianMagic;
-import com.mcgamer.xadian_magic.networking.packet.ExampleC2SPacket;
-import com.mcgamer.xadian_magic.networking.packet.ManaDataSyncS2CPacket;
-import com.mcgamer.xadian_magic.networking.packet.StopRainSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -45,6 +43,24 @@ public class ModPackets {
                 .decoder(ManaDataSyncS2CPacket::new)
                 .encoder(ManaDataSyncS2CPacket::toBytes)
                 .consumerMainThread(ManaDataSyncS2CPacket::handle)
+                .add();
+
+    net.messageBuilder(MasteredWindBlowingSpellC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(MasteredWindBlowingSpellC2SPacket::new)
+                .encoder(MasteredWindBlowingSpellC2SPacket::toBytes)
+                .consumerMainThread(MasteredWindBlowingSpellC2SPacket::handle)
+                .add();
+
+    net.messageBuilder(WeakWindBlowingSpellC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(WeakWindBlowingSpellC2SPacket::new)
+                .encoder(WeakWindBlowingSpellC2SPacket::toBytes)
+                .consumerMainThread(WeakWindBlowingSpellC2SPacket::handle)
+                .add();
+
+    net.messageBuilder(FireballSpellC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(FireballSpellC2SPacket::new)
+                .encoder(FireballSpellC2SPacket::toBytes)
+                .consumerMainThread(FireballSpellC2SPacket::handle)
                 .add();
     }
 

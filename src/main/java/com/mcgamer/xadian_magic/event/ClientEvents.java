@@ -2,6 +2,9 @@ package com.mcgamer.xadian_magic.event;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import com.mcgamer.xadian_magic.client.ManaHudOverlay;
+import com.mcgamer.xadian_magic.networking.packet.FireballSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.MasteredWindBlowingSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.WeakWindBlowingSpellC2SPacket;
 import com.mcgamer.xadian_magic.screens.SpellBookScreen;
 import com.mcgamer.xadian_magic.networking.ModPackets;
 import com.mcgamer.xadian_magic.networking.packet.StopRainSpellC2SPacket;
@@ -15,24 +18,15 @@ import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static com.mcgamer.xadian_magic.screens.SpellBookScreen.CURRENT_ENTRY;
-
 public class ClientEvents {
     @Mod.EventBusSubscriber(modid = XadianMagic.MOD_ID, value = Dist.CLIENT)
     public static class ClientForgeEvents {
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event) {
             if(KeyBinding.CAST_SPELL_KEY.consumeClick()) {
-                if(CURRENT_ENTRY == "stop_rain_spell_entry") {
-                    ModPackets.sendToServer(new StopRainSpellC2SPacket());
-                } else {
-                    Minecraft.getInstance().player.sendSystemMessage(Component.literal("You don't have a spell " +
-                            "selected!"));
-                    Minecraft.getInstance().player.sendSystemMessage(Component.literal(CURRENT_ENTRY));
-                }
+                ModPackets.sendToServer(new WeakWindBlowingSpellC2SPacket());
             }
             if(KeyBinding.OPEN_GUI_KEY.consumeClick()) {
-                CURRENT_ENTRY = "spellbook_gui";
                 Minecraft.getInstance().setScreen(new SpellBookScreen(Component.literal("Spellbook")));
             }
         }

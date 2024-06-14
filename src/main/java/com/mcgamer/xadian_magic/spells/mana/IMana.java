@@ -10,6 +10,8 @@ public interface IMana {
 
     void subMana(int sub);
 
+    void setMana(int amount);
+
     void copyFrom(PlayerMana source);
 
     void saveNBTData(CompoundTag nbt);

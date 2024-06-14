@@ -23,6 +23,11 @@ public class PlayerMana implements IMana{
     }
 
     @Override
+    public void setMana(int amount) {
+        this.mana = amount;
+    }
+
+    @Override
     public void copyFrom(PlayerMana source) {
         this.mana = source.mana;
     }

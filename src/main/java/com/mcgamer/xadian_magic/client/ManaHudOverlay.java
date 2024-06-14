@@ -2,7 +2,10 @@ package com.mcgamer.xadian_magic.client;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
@@ -32,12 +35,13 @@ public class ManaHudOverlay {
     private static final ResourceLocation FIFTY_MANA_BAR = new ResourceLocation(XadianMagic.MOD_ID,
             "textures/mana/50_mana_bar.png");
 
+
     public static final IGuiOverlay HUD_MANA = ((gui, poseStack, partialTick, width, height) -> {
         int x = width / 2;
         int y = height;
 
         poseStack.drawString(Minecraft.getInstance().font, String.valueOf(ClientManaData.getPlayerMana()),
-                624, 257, 14737632, true);
+                x + 304, y - 74, 14737632, true);
 
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

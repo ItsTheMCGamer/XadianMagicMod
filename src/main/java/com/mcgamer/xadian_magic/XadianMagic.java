@@ -1,12 +1,15 @@
 package com.mcgamer.xadian_magic;
 
+import com.mcgamer.xadian_magic.command.ManaCommand;
 import com.mcgamer.xadian_magic.item.ModCreativeModeTabs;
 import com.mcgamer.xadian_magic.item.ModItems;
 import com.mcgamer.xadian_magic.networking.ModPackets;
+import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,6 +37,7 @@ public class XadianMagic {
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(this::registerCommands);
 
         modEventBus.addListener(this::addCreative);
     }
@@ -42,6 +46,9 @@ public class XadianMagic {
         ModPackets.register();
     }
 
+    private void registerCommands(RegisterCommandsEvent evt) {
+        ManaCommand.register(evt.getDispatcher());
+    }
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
