@@ -1,10 +1,7 @@
 package com.mcgamer.xadian_magic.item;
 
 import com.mcgamer.xadian_magic.XadianMagic;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
-import net.minecraft.world.item.TridentItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -75,7 +72,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> MAGE_GILLS_AMULET = ITEMS.register("mage_gills_amulet",
             () -> new Item(new Item.Properties()));
-
 
 
     public static void register(IEventBus eventBus) {

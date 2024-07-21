@@ -2,9 +2,7 @@ package com.mcgamer.xadian_magic.screens.entries;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import com.mcgamer.xadian_magic.networking.ModPackets;
-import com.mcgamer.xadian_magic.networking.packet.StopRainSpellC2SPacket;
-import com.mcgamer.xadian_magic.screens.SpellBookScreen;
-import com.mcgamer.xadian_magic.util.KeyBinding;
+import com.mcgamer.xadian_magic.networking.packet.sky.StopRainSpellC2SPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -16,7 +14,7 @@ public class StopRainSpellScreen extends Screen {
     private static final ResourceLocation SPELLBOOK_GUI = new ResourceLocation(XadianMagic.MOD_ID,
             "textures/gui/spellbook_gui.png");
     private static final ResourceLocation STOP_RAIN_RUNE = new ResourceLocation(XadianMagic.MOD_ID,
-            "textures/gui/entries/stop_rain/stop_rain_rune.png");
+            "textures/gui/entries/stop_rain_rune.png");
 
     public StopRainSpellScreen(Component pTitle) {
         super(pTitle);

@@ -26,6 +26,8 @@
   "item.xadian_magic.earth_staff": "Earth Staff",
   "item.xadian_magic.staff_of_ziard": "Staff of Ziard",
 
+  "item.xadian_magic.mud_water_bucket": "Mud Bucket",
+
   "item.xadian_magic.sky_primal_stone": "Sky Primal Stone",
   "item.xadian_magic.sun_primal_stone": "Sun Primal Stone",
   "item.xadian_magic.star_primal_stone": "Star Primal Stone",
@@ -37,5 +39,9 @@
 
   "key.category.xadian_magic.xadian_magic": "Xadian Magic",
   "key.xadian_magic.cast_spell": "Cast Spell",
-  "key.xadian_magic.open_gui": "Open GUI"
+  "key.xadian_magic.open_gui": "Open GUI",
+
+  "effect.xadian_magic.quicksand_effect_object": "Quicksand",
+
+  "block.xadian_magic.quicksand": "Quicksand"
 }

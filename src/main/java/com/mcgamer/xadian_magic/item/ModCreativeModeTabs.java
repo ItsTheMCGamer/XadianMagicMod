@@ -1,12 +1,12 @@
 package com.mcgamer.xadian_magic.item;
 
+import com.mcgamer.xadian_magic.RegistryManager;
 import com.mcgamer.xadian_magic.XadianMagic;
+import com.mcgamer.xadian_magic.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -52,6 +52,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.STAFF_OF_ZIARD.get());
 
                         pOutput.accept(ModItems.MAGE_GILLS_AMULET.get());
+
+                        pOutput.accept(ModBlocks.QUICKSAND_BLOCK.get());
+
+                        pOutput.accept(RegistryManager.MUD.FLUID_BUCKET.get());
                     })
                     .build());
 

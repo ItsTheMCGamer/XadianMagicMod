@@ -1,11 +1,7 @@
 package com.mcgamer.xadian_magic.networking.packet;
 
-import com.mcgamer.xadian_magic.client.ClientManaData;
-import com.mcgamer.xadian_magic.spells.BasicSpells;
-import net.minecraft.client.Minecraft;
-import net.minecraft.commands.CommandSourceStack;
+import com.mcgamer.xadian_magic.client.mana.ClientManaData;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;

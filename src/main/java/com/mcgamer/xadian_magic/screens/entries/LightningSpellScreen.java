@@ -2,21 +2,21 @@ package com.mcgamer.xadian_magic.screens.entries;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import com.mcgamer.xadian_magic.networking.ModPackets;
-import com.mcgamer.xadian_magic.networking.packet.sky.MasteredWindBlowingSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.sky.LightningSpellC2SPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
-public class MasteredWindBlowingSpellScreen extends Screen {
+public class LightningSpellScreen extends Screen {
 
     private static final ResourceLocation SPELLBOOK_GUI = new ResourceLocation(XadianMagic.MOD_ID,
             "textures/gui/spellbook_gui.png");
-    private static final ResourceLocation MASTERED_WIND_BLOWING_RUNE = new ResourceLocation(XadianMagic.MOD_ID,
-            "textures/gui/entries/mastered_wind_blowing_rune.png");
+    private static final ResourceLocation LIGHTNING_RUNE = new ResourceLocation(XadianMagic.MOD_ID,
+            "textures/gui/entries/lightning_rune.png");
 
-    public MasteredWindBlowingSpellScreen(Component pTitle) {
+    public LightningSpellScreen(Component pTitle) {
         super(pTitle);
     }
 
@@ -30,7 +30,7 @@ public class MasteredWindBlowingSpellScreen extends Screen {
     @Override
     public boolean keyPressed(int pKeyCode, int pScanCode, int pModifiers) {
         if(pKeyCode == 66) {
-            ModPackets.sendToServer(new MasteredWindBlowingSpellC2SPacket());
+            ModPackets.sendToServer(new LightningSpellC2SPacket());
             return true;
         } else if(pKeyCode == 256) {
             Minecraft.getInstance().setScreen((Screen) null);
@@ -54,14 +54,14 @@ public class MasteredWindBlowingSpellScreen extends Screen {
         graphics.blit(SPELLBOOK_GUI, x - 145, y - 260, 0, 0, 288, 188,
                 288, 188);
 
-        graphics.drawString(Minecraft.getInstance().font, Component.literal("This is spell represents "),
+        graphics.drawString(Minecraft.getInstance().font, Component.literal("This spells summons "),
                 324, 87, 0, false);
-        graphics.drawString(Minecraft.getInstance().font, Component.literal("complete mastery of the "),
+        graphics.drawString(Minecraft.getInstance().font, Component.literal("a bolt of lightning "),
                 324, 98, 0, false);
-        graphics.drawString(Minecraft.getInstance().font, Component.literal("Aspiro spell."),
+        graphics.drawString(Minecraft.getInstance().font, Component.literal("to attack your enemies."),
                 324, 109, 0, false);
 
-        graphics.blit(MASTERED_WIND_BLOWING_RUNE, x - 120, y - 200, 0, 0, 100, 50,
+        graphics.blit(LIGHTNING_RUNE, x - 120, y - 200, 0, 0, 100, 50,
                 100, 50);
 
         super.render(graphics, mouseX, mouseY, partialTicks);

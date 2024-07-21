@@ -1,12 +1,10 @@
 package com.mcgamer.xadian_magic.event;
 
 import com.mcgamer.xadian_magic.XadianMagic;
-import com.mcgamer.xadian_magic.client.ClientManaData;
+import com.mcgamer.xadian_magic.client.mana.PlayerMana;
+import com.mcgamer.xadian_magic.client.mana.PlayerManaProvider;
 import com.mcgamer.xadian_magic.networking.ModPackets;
 import com.mcgamer.xadian_magic.networking.packet.ManaDataSyncS2CPacket;
-import com.mcgamer.xadian_magic.spells.mana.PlayerMana;
-import com.mcgamer.xadian_magic.spells.mana.PlayerManaProvider;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;

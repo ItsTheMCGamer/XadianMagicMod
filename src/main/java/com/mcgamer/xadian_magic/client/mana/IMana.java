@@ -1,4 +1,4 @@
-package com.mcgamer.xadian_magic.spells.mana;
+package com.mcgamer.xadian_magic.client.mana;
 
 import net.minecraft.nbt.CompoundTag;
 

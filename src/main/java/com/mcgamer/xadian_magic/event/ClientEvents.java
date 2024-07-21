@@ -1,13 +1,10 @@
 package com.mcgamer.xadian_magic.event;
 
 import com.mcgamer.xadian_magic.XadianMagic;
-import com.mcgamer.xadian_magic.client.ManaHudOverlay;
-import com.mcgamer.xadian_magic.networking.packet.FireballSpellC2SPacket;
-import com.mcgamer.xadian_magic.networking.packet.MasteredWindBlowingSpellC2SPacket;
-import com.mcgamer.xadian_magic.networking.packet.WeakWindBlowingSpellC2SPacket;
+import com.mcgamer.xadian_magic.client.mana.ManaHudOverlay;
+import com.mcgamer.xadian_magic.networking.packet.sky.WeakWindBlowingSpellC2SPacket;
 import com.mcgamer.xadian_magic.screens.SpellBookScreen;
 import com.mcgamer.xadian_magic.networking.ModPackets;
-import com.mcgamer.xadian_magic.networking.packet.StopRainSpellC2SPacket;
 import com.mcgamer.xadian_magic.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;

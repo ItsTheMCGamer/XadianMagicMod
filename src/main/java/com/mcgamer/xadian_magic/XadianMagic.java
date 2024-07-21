@@ -1,11 +1,14 @@
 package com.mcgamer.xadian_magic;
 
+import com.mcgamer.xadian_magic.block.ModBlocks;
 import com.mcgamer.xadian_magic.command.ManaCommand;
+import com.mcgamer.xadian_magic.effect.XadianEffectsRegistry;
 import com.mcgamer.xadian_magic.item.ModCreativeModeTabs;
 import com.mcgamer.xadian_magic.item.ModItems;
 import com.mcgamer.xadian_magic.networking.ModPackets;
-import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,6 +36,12 @@ public class XadianMagic {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        XadianEffectsRegistry.EFFECTS.register(modEventBus);
+
+        RegistryManager.FLUIDTYPES.register(modEventBus);
+        RegistryManager.FLUIDS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -65,7 +74,8 @@ public class XadianMagic {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ItemBlockRenderTypes.setRenderLayer(RegistryManager.MUD.FLUID.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(RegistryManager.MUD.FLUID_FLOW.get(), RenderType.translucent());
         }
     }
 }

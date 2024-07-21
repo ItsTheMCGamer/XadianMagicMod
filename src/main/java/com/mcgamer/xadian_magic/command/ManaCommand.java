@@ -2,7 +2,7 @@ package com.mcgamer.xadian_magic.command;
 
 import com.mcgamer.xadian_magic.networking.ModPackets;
 import com.mcgamer.xadian_magic.networking.packet.ManaDataSyncS2CPacket;
-import com.mcgamer.xadian_magic.spells.mana.PlayerManaProvider;
+import com.mcgamer.xadian_magic.client.mana.PlayerManaProvider;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -12,7 +12,6 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.Entity;
 
 import java.util.Collection;
 

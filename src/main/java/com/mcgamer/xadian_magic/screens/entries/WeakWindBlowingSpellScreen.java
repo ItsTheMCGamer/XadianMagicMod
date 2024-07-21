@@ -2,8 +2,7 @@ package com.mcgamer.xadian_magic.screens.entries;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import com.mcgamer.xadian_magic.networking.ModPackets;
-import com.mcgamer.xadian_magic.networking.packet.MasteredWindBlowingSpellC2SPacket;
-import com.mcgamer.xadian_magic.networking.packet.WeakWindBlowingSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.sky.WeakWindBlowingSpellC2SPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -15,7 +14,7 @@ public class WeakWindBlowingSpellScreen extends Screen {
     private static final ResourceLocation SPELLBOOK_GUI = new ResourceLocation(XadianMagic.MOD_ID,
             "textures/gui/spellbook_gui.png");
     private static final ResourceLocation WEAK_WIND_BLOWING_RUNE = new ResourceLocation(XadianMagic.MOD_ID,
-            "textures/gui/entries/weak_wind_blowing/weak_wind_blowing_rune.png");
+            "textures/gui/entries/weak_wind_blowing_rune.png");
 
     public WeakWindBlowingSpellScreen(Component pTitle) {
         super(pTitle);

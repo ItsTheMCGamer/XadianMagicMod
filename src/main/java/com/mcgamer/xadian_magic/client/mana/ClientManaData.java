@@ -1,4 +1,4 @@
-package com.mcgamer.xadian_magic.client;
+package com.mcgamer.xadian_magic.client.mana;
 
 public class ClientManaData {
     private static int playerMana;

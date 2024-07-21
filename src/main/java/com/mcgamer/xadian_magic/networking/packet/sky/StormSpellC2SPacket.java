@@ -1,26 +1,27 @@
-package com.mcgamer.xadian_magic.networking.packet;
+package com.mcgamer.xadian_magic.networking.packet.sky;
 
-import com.mcgamer.xadian_magic.client.ClientManaData;
+import com.mcgamer.xadian_magic.client.mana.ClientManaData;
+import com.mcgamer.xadian_magic.client.mana.PlayerManaProvider;
 import com.mcgamer.xadian_magic.networking.ModPackets;
-import com.mcgamer.xadian_magic.spells.BasicSpells;
-import com.mcgamer.xadian_magic.spells.mana.PlayerMana;
-import com.mcgamer.xadian_magic.spells.mana.PlayerManaProvider;
+import com.mcgamer.xadian_magic.networking.packet.ManaDataSyncS2CPacket;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class StopRainSpellC2SPacket {
-    public StopRainSpellC2SPacket() {
+public class StormSpellC2SPacket {
+    //sky
+    public StormSpellC2SPacket() {
 
     }
 
-    public StopRainSpellC2SPacket(FriendlyByteBuf buf) {
+    public StormSpellC2SPacket(FriendlyByteBuf buf) {
 
     }
 
@@ -35,12 +36,13 @@ public class StopRainSpellC2SPacket {
             //HERE IS ON SERVER
             CommandSourceStack commandSourceStack = context.getSender().createCommandSourceStack();
 
-            if(ClientManaData.getPlayerMana() >= 3) {
+            if(ClientManaData.getPlayerMana() >= 10) {
                 //stop rain
-                BasicSpells.setClear(commandSourceStack, 1000);
-                //remove 3 mana
+                setThunder(commandSourceStack, 1000);
+
+
                 player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
-                    mana.subMana(3);
+                    mana.subMana(10);
                     ModPackets.sentToPlayer(new ManaDataSyncS2CPacket(mana.getMana()), player);
                             });
             } else {
@@ -49,6 +51,16 @@ public class StopRainSpellC2SPacket {
                 }
         });
         return true;
+    }
+
+    private static int getDuration(CommandSourceStack pSource, int pTime, IntProvider pTimeProvider) {
+        return pTime == -1 ? pTimeProvider.sample(pSource.getLevel().getRandom()) : pTime;
+    }
+
+    public static int setThunder(CommandSourceStack pSource, int pTime) {
+        pSource.getLevel().setWeatherParameters(0, getDuration(pSource, pTime, ServerLevel.THUNDER_DURATION),
+                true, true);
+        return pTime;
     }
 
 }

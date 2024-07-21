@@ -1,11 +1,8 @@
-package com.mcgamer.xadian_magic.client;
+package com.mcgamer.xadian_magic.client.mana;
 
 import com.mcgamer.xadian_magic.XadianMagic;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;

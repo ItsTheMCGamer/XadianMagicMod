@@ -1,0 +1,8 @@
+{
+  "parent": "forge:item/default",
+  "textures": {
+    "base": "xadian_magic:item/bucket_base",
+    "cover": "xadian_magic:item/bucket_cover",
+    "fluid": "xadian_magic:item/bucket_fluid"
+  }
+}
