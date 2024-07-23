@@ -10,9 +10,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.Tags;
@@ -37,7 +39,7 @@ public class QuicksandSpellC2SPacket {
     public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
         ServerPlayer player = context.getSender();
-        Level level = Minecraft.getInstance().level;
+        ServerLevel level = context.getSender().serverLevel();
         context.enqueueWork(() -> {
             if(ClientManaData.getPlayerMana() >= 30) {
 
@@ -62,7 +64,6 @@ public class QuicksandSpellC2SPacket {
                                 ModBlocks.QUICKSAND_BLOCK.get().defaultBlockState());
                         level.setBlockAndUpdate(new BlockPos(pos.getX(), pos.getY(), pos.getZ() - 1),
                                 ModBlocks.QUICKSAND_BLOCK.get().defaultBlockState());
-
                     } else {
                         player.sendSystemMessage(Component.literal("You are unable to transform this block into quicksand!"));
                     }

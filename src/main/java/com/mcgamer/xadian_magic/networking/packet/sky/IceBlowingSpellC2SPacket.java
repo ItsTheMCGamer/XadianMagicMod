@@ -72,12 +72,6 @@ public class IceBlowingSpellC2SPacket {
 
                     entity.addEffect(slownessEffect);
                     player.setIsInPowderSnow(true);
-
-
-                    //if(!entity.hasEffect(MobEffects.MOVEMENT_SLOWDOWN)) {
-                    //    player.sendSystemMessage(Component.literal("No longer freezing!"));
-                    //    entity.setIsInPowderSnow(false);
-                    //}
                 }
 
                 player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {

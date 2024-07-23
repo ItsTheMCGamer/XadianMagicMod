@@ -32,6 +32,10 @@ public class SpellBookScreen extends Screen {
             "textures/gui/entries/quicksand_rune.png");
     private static final ResourceLocation EARTHQUAKE_SPELL = new ResourceLocation(XadianMagic.MOD_ID,
             "textures/gui/entries/earthquake_rune.png");
+    private static final ResourceLocation MUD_SPELL = new ResourceLocation(XadianMagic.MOD_ID,
+            "textures/gui/entries/mud_rune.png");
+    private static final ResourceLocation STRENGTH_SPELL = new ResourceLocation(XadianMagic.MOD_ID,
+            "textures/gui/entries/strength_rune.png");
 
 
     public SpellBookScreen(Component pTitle) {
@@ -80,6 +84,14 @@ public class SpellBookScreen extends Screen {
         this.addRenderableWidget(new ImageButton( x + 64, y - 118, 20, 18,
                 0, 0, 19, EARTHQUAKE_SPELL, (p_289631_) -> {
             Minecraft.getInstance().setScreen(new EarthquakeSpellScreen(Component.literal("Earthquake")));
+        }));
+        this.addRenderableWidget(new ImageButton( x + 44, y - 118, 20, 18,
+                0, 0, 19, MUD_SPELL, (p_289631_) -> {
+            Minecraft.getInstance().setScreen(new MudSpellScreen(Component.literal("Lutum Facio")));
+        }));
+        this.addRenderableWidget(new ImageButton( x + 24, y - 118, 20, 18,
+                0, 0, 19, STRENGTH_SPELL, (p_289631_) -> {
+            Minecraft.getInstance().setScreen(new StrengthSpellScreen(Component.literal("Vires Ardens")));
         }));
     }
 

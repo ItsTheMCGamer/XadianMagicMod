@@ -4,8 +4,10 @@ import com.mcgamer.xadian_magic.XadianMagic;
 import com.mcgamer.xadian_magic.networking.packet.*;
 import com.mcgamer.xadian_magic.networking.packet.earth.EarthquakeSpellC2SPacket;
 import com.mcgamer.xadian_magic.networking.packet.earth.QuicksandSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.ocean.MudSpellC2SPacket;
 import com.mcgamer.xadian_magic.networking.packet.sky.*;
 import com.mcgamer.xadian_magic.networking.packet.sun.FireballSpellC2SPacket;
+import com.mcgamer.xadian_magic.networking.packet.sun.StrengthSpellC2SPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -88,6 +90,16 @@ public class ModPackets {
            .decoder(EarthquakeSpellC2SPacket::new)
            .encoder(EarthquakeSpellC2SPacket::toBytes)
            .consumerMainThread(EarthquakeSpellC2SPacket::handle)
+           .add();
+   net.messageBuilder(MudSpellC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+           .decoder(MudSpellC2SPacket::new)
+           .encoder(MudSpellC2SPacket::toBytes)
+           .consumerMainThread(MudSpellC2SPacket::handle)
+           .add();
+   net.messageBuilder(StrengthSpellC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+           .decoder(StrengthSpellC2SPacket::new)
+           .encoder(StrengthSpellC2SPacket::toBytes)
+           .consumerMainThread(StrengthSpellC2SPacket::handle)
            .add();
     }
 

@@ -49,8 +49,8 @@ public class RegistryManager {
     }
 
     public static final FluidStuff MUD = addFluid("Mud", new XadianFluidType.FluidInfo(
-            "mud", 0x80280A, 0.1F, 1.5F), MudFluidType::new, LiquidBlock::new,
-            prop -> prop.slopeFindDistance(3).levelDecreasePerBlock(2).tickRate(15),
+            "mud", 0x85280A, 0.1F, 1.25F), MudFluidType::new, LiquidBlock::new,
+            prop -> prop.slopeFindDistance(3).levelDecreasePerBlock(3).tickRate(18),
             FluidType.Properties.create()
                     .canSwim(false)
                     .canDrown(true)
@@ -60,8 +60,8 @@ public class RegistryManager {
                     .canHydrate(true)
                     .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY_LAVA)
                     .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL_LAVA)
-                    .density(1000)
-                    .viscosity(500)
+                    .density(50)
+                    .viscosity(200)
                     .temperature(20));
 
 

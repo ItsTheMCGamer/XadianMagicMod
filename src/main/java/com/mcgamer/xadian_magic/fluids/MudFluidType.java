@@ -22,6 +22,7 @@ public class MudFluidType extends XadianFluidType {
         super(properties, info);
     }
 
+    /**
     @Override
     public boolean move(FluidState state, LivingEntity entity, Vec3 movementVector, double gravity) {
         //lava movement logic copied from LivingEntity
@@ -48,6 +49,7 @@ public class MudFluidType extends XadianFluidType {
 
         return true;
     }
+    **/
 
     public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
         consumer.accept(new IClientFluidTypeExtensions() {
